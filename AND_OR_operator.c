@@ -3,8 +3,8 @@ int main()
 {
     int a=1 , b=2, c;
 
-   // c= a && b;
-
+   // c= a && b;  // && => fisrt digit 0 then no check condition , no increment decrement      
+                 // || =>  first digit 1 then no check condition , base on truth table
     // printf("a : %d , b : %d , c : %d\n",a,b,c); // 1 1 1
 
     // c= a && --b;
