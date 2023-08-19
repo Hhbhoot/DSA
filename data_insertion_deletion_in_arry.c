@@ -89,7 +89,7 @@ int main()
 
     do
     {
-        printf("1.insert step by step \n");
+        printf("1.insert step by step  \n");
         printf("2.insert in first position\n");
         printf("3.Delete step by step\n");
         printf("4.Delete from first position\n");
