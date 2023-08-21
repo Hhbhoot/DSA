@@ -17,6 +17,11 @@ int insertend(int val)
 }
 int firstinsert(int val)
 {
+      if (top >= (n - 1))
+      {
+        printf("Array is full...\n");
+      }
+      else{
     top++;
 
     // printf("%d\n",top);
@@ -27,6 +32,7 @@ int firstinsert(int val)
     }
 
     arr[0] = val;
+      }
 }
 
 int deletend()
@@ -90,6 +96,7 @@ int main()
     do
     {
         printf("1.insert step by step  \n");
+        
         printf("2.insert in first position\n");
         printf("3.Delete step by step\n");
         printf("4.Delete from first position\n");
