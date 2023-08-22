@@ -17,11 +17,11 @@ int search(int arr[], int n)
         }
         else if (arr[mid] > n)
         {
-            h = mid - 1;
+            l= mid + 1;
         }
         else if (arr[mid] < n)
         {
-            l = mid + 1;
+            h = mid - 1;
         }
     }
 
@@ -30,7 +30,7 @@ int search(int arr[], int n)
 int main()
 {
     int n;
-    int arr[10] = {11, 25, 78, 89, 95, 100, 102, 106, 108, 150};
+    int arr[10] = {50,35,40,35,30,25,20,15,10,5};
 
     for (int i = 0; i < 10; i++)
     {
