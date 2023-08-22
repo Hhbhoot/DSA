@@ -9,7 +9,7 @@ int search(int arr[], int n)
     for (int i = 0; i <= h; i++)
     {
 
-        mid = (l + h) / 2;
+         mid = (l + h) / 2;
 
         if (arr[mid] == n)
         {
