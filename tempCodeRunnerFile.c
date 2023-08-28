@@ -1,2 +1,2 @@
 
-    case 2:
+    else if (arr[mid] > m)
