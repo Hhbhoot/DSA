@@ -27,6 +27,13 @@ int main()
     d.grade = 'D';
     d.ptr = NULL;
 
+    printf("\nA ==> Age : %d , GRADE : %c ", a.age,a.grade);   
+    printf("\nB ==> Age : %d , GRADE : %c ", b.age,b.grade);   
+    printf("\nC ==> Age : %d , GRADE : %c ", c.age,c.grade);   
+    printf("\nD ==> Age : %d , GRADE : %c ", d.age,d.grade);
+
+    printf("\n");
+
     a.ptr = &b;
     b.ptr = &c;
     c.ptr = &d;
