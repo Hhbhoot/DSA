@@ -14,39 +14,37 @@ int print(int arr[])
 int quicksort(int arr[], int l, int h)
 {
     int i, j, temp, pivot;
-   
-
-   
 
     if (l < h)
     {
-         printf("\n");
-         print(arr);
+        printf("\n");
+        print(arr);
 
-         pivot = l;
+        pivot = l;
         i = l;
-         j = h;
-        while(i<j){
-        while (arr[i] <= arr[pivot] && i < h)
-            i++;
-        while (arr[pivot] < arr[j])
-            j--;
-
-        if (i < j)
+        j = h;
+        while (i < j)
         {
-            temp = arr[i];
-            arr[i] = arr[j];
-            arr[j] = temp;
-        }
+            while (arr[i] <= arr[pivot] && i < h)
+                i++;
+            while (arr[pivot] < arr[j])
+                j--;
+
+            if (i < j)
+            {
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
         }
 
         temp = arr[pivot];
         arr[pivot] = arr[j];
         arr[j] = temp;
-    }
-        quicksort(arr, l, j - 1);
-        quicksort(arr, j + 1, h);
     
+    quicksort(arr, l, j - 1);
+    quicksort(arr, j + 1, h);
+    }
 }
 
 int main()

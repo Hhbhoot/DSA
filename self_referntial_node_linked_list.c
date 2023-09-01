@@ -34,6 +34,7 @@ int main()
 
     printf("\n");
 
+
     a.ptr = &b;
     b.ptr = &c;
     c.ptr = &d;
