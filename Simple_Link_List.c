@@ -31,9 +31,8 @@ void inseretEnd(int val)
 }
 
 void MidInsert(int val, int position)
-{
-    struct node *ptr = head;
-    struct node *temp = malloc(sizeof(struct node));
+{  struct node *ptr = head;
+     struct  node *temp = malloc(sizeof(struct node));
     temp->data = val;
     temp->next = NULL;
 
