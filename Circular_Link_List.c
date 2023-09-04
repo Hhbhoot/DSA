@@ -117,7 +117,8 @@ void FirstDelete()
         printf("List Is Empty..\n");
         return;
     }
-    head = ptr->next;
+    ptr = ptr->next;
+    head = ptr;
     while (ptr->next != head)
     {
         p = ptr;
@@ -125,7 +126,6 @@ void FirstDelete()
     }
     p->next = head;
     free(ptr);
-    return;
 }
 int Display()
 {
