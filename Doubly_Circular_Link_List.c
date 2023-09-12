@@ -41,22 +41,19 @@ void MidInsert(int val, int position)
 {
     struct node *ptr = head;
     struct node *p;
-    struct node *temp = malloc(sizeof(struct node));   temp->data = val;
-    temp->next = NULL;
-    temp->previous = NULL;
+    struct node *temp = malloc(sizeof(struct node));   
+    temp->data = val;
 
     while (ptr->data != position)
     {
-
         ptr = ptr->next;
-        p = ptr->next;
     }
 
-    temp->next = ptr->next;
+    temp->next = ptr ->next;
+    ptr -> next->previous = temp;
     ptr->next = temp;
-
     temp->previous = ptr;
-    p->previous = temp;
+    return ;
 }
 void InsertEnd(int val)
 {
@@ -89,31 +86,37 @@ void FirstDelete()
 {
     struct node *ptr = head;
     struct node *p ;
+    
+    
 
     if (head == NULL)
     {
         printf("List is Empty..\n");
         return;
     }
-
-    while(ptr ->next= head )
-    {   
-        p = ptr ;
-        ptr = ptr ->next ;
+    while(ptr -> next != head )
+    {
+        ptr = ptr -> next;
+        p = ptr;
+       
+       
     }
-    
-    ptr ->next = head ->next ;
-    p ->next = head ;
+
+    ptr ->next =head -> next ;
+    free(head);
+    head = ptr ->next ;
+    head ->previous = p;
+    p -> next = head;
 
 
-    head->previous = p;
+     
     
-    free(ptr);
+
 }
 
 void MidDelete(int position)
 {
-    struct node *ptr = head;
+    struct node *ptr = head;                     
     struct node *p;
     struct node *q;
     while (ptr->data != position)
@@ -180,13 +183,15 @@ void ReverseDisplay()
         ptr = ptr->next;
     }
 
-     ptr -> next = temp ;
+      
 
-    while (temp -> previous != head)
+    while (ptr-> previous != head ->previous)
     {
-        printf("%d ", temp->data);
-        temp = temp->previous;
+        printf("%d ", ptr->data);
+        ptr = ptr->previous;
     }
+        printf("%d ", ptr->data);
+
 }
 
 int main()
